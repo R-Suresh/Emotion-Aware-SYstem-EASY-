@@ -21,3 +21,4 @@ On D day –<br>
 <br>
 File descriptions-<br>
 1. Requirements.txt - all the librarires intalled in my anaconda virtual env, ```python = 3.6.6```
+2. [Image Corpus](https://drive.google.com/open?id=1Rq9An3UKM_iI_Y_yxWcN4hl-Z7-vfQgC)
