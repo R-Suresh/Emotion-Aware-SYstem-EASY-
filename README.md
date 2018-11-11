@@ -10,6 +10,7 @@
 2. Create DNN for music classification
 3. Make sure it runs on all other systems
 4. Make a web app for easy deployment on all platforms - cuurently have to run two different files (one to capture image, other to deliver services)
+5. Have some different Images in my system have to remove duplicates and upload to image corpus
 ## On D day – <br>
 1. Check model extensively 
 2. Can try to display detected emotion in a text box or paragraph
