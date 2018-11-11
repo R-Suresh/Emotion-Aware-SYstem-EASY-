@@ -8,12 +8,16 @@ Order of running app –<br>
 <br>
 To do in the future,<br>
 
-1.	Train image Classifier and then integrate it with live image in app, it probably can write its classification result in a variable that is used by other components ( Do this First as I suspect will take the most time and also predicting with live image may be hard ( Classes, etc)) 
-2.	Make the music database and then, get the music model working ( u can follow the same classes as text classification) (Maybe just increase the sequence length, and only read main paragraph of song)
-3.	Integrate all 3 components
+1. Create a bigger data corpus to train all 3 components, especially for the image classifier give a lot of low res and low light photos that are typically seen in real world deployment
+2. Create DNN for music classification
+3. Make sure it runs on all other systems
+4. Make a web app for easy deployment on all platforms - cuurently have to run two different files (one to capture image, other to deliver services)
 <br>
 On D day –<br>
 1.	Check model extensively 
 2.	Can try to display detected emotion in a text box or paragraph
 3.	Get the ppt ready
 4.	Get portable speaker ( one with good bass )
+<br>
+File descriptions-
+1. Requirements.txt - all the librarires intalled in my anaconda virtual env, ```python = 3.6.6```
