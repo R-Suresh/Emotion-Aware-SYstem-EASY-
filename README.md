@@ -18,3 +18,10 @@
 ## File descriptions - <br>
 1. Requirements.txt - all the librarires intalled in my anaconda virtual env, ```python = 3.6.6``` 
 2. [Image Corpus](https://drive.google.com/open?id=1Rq9An3UKM_iI_Y_yxWcN4hl-Z7-vfQgC)
+3. [Happy songs](https://drive.google.com/open?id=1COYn4g5VcHbNZCPzWpyrq9DAsId3PCq1)
+4. [Sad Songs](https://drive.google.com/open?id=1nz8cNJjT6BwDQAFeJEaelJWy6H5dbeO_)
+5. [Happy Quotes](https://docs.google.com/spreadsheets/d/18jxlroMKeqfR_PBHx8Zon1QHY6TQv3NB0EnW909yn5s/edit?usp=sharing) Note: This has some quote repetions, remove if possible
+6. [Motivational Quotes](https://drive.google.com/open?id=102iHGh4NITqejrMyMwGUOEeQaKDLO1xYNTSvhTmLlEw) Note: This has some quote repetions, remove if possible
+7. [Calm Quotes](https://drive.google.com/open?id=1j6ss3V4BKX7OXN4kpar4XdnPZWbxk67proouk0_tSac)
+
+All Copy rights of Music belong to owners
