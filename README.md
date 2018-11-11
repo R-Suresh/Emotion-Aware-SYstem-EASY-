@@ -26,5 +26,8 @@
 8. [Motivational Quotes](https://drive.google.com/open?id=102iHGh4NITqejrMyMwGUOEeQaKDLO1xYNTSvhTmLlEw) Note: This has some quote repetions, remove if possible
 9. [Calm Quotes](https://drive.google.com/open?id=1j6ss3V4BKX7OXN4kpar4XdnPZWbxk67proouk0_tSac)
 10. [Experimental Analysis and Testing ppt](https://docs.google.com/presentation/d/1QhqxY8rquuZjTnNE-IdLp1n02qkLtoIbwqBvuKvgn9A/edit?usp=sharing) Note: The values of accuracy have to be double checked
+11. HappySongs1.csv and HappySongs2.csv have a common 'Saiyan...' song entry, pls remove before merging, also the ' charecter causes pandas.read_csv() to have decoding problems, so change such names if possible
+12. SadSongs.csv has the features extracted for sad songs
+13. MotivationSongs.csv and CalmSongs.csv have only names of tracks, features still have to be extracted
 
 All Copy rights of Music belong to owners
