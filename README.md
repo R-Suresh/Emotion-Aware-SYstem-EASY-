@@ -19,5 +19,5 @@ On D day –<br>
 3.	Get the ppt ready
 4.	Get portable speaker ( one with good bass )
 <br>
-File descriptions-
+File descriptions-<br>
 1. Requirements.txt - all the librarires intalled in my anaconda virtual env, ```python = 3.6.6```
