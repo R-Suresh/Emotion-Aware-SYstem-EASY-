@@ -5,7 +5,8 @@
 | Module        | Quote Detection           | Technique  |
 | ------------- |:-------------:| -----:|
 | Accuracy      | 56.25% | Ensembling |
-## Order of running app – <br>
+| Filename      | model-10-0.0704.hdf5 |  |
+## Order of running app – <br> 
 1.	Run the Quote Classifier Binary.ipynb -> this trains the quote classification model, find dependencies listed in that
 2.  Run the Training Image Classification.ipynb -> this trains the image classification model 
 2.	Run the video_face_eye_smile_detection.py file to generate live images that are used for the Image Classification model
