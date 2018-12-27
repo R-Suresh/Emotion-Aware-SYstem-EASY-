@@ -1,6 +1,10 @@
 # Emotion-Aware-SYstem-EASY-
 ## Working - <br>
 ![](working.gif)
+## Current Results - <br>
+| Module        | Quote Detection           | Technique  |
+| ------------- |:-------------:| -----:|
+| Accuracy      | 56.25% | Ensembling |
 ## Order of running app – <br>
 1.	Run the Quote Classifier Binary.ipynb -> this trains the quote classification model, find dependencies listed in that
 2.  Run the Training Image Classification.ipynb -> this trains the image classification model 
