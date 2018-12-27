@@ -1,4 +1,6 @@
 # Emotion-Aware-SYstem-EASY-
+## Working - <br>
+
 
 ## Order of running app – <br>
 1.	Run the Quote Classifier Binary.ipynb -> this trains the quote classification model, find dependencies listed in that
