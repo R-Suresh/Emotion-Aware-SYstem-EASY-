@@ -7,7 +7,12 @@
 | Accuracy      | 56.25% | Ensembling |
 | Filename      | model-10-0.0704.hdf5 |  |
 ## Order of running app – <br> 
-1.	Run the Quote Classifier Binary.ipynb -> this trains the quote classification model, find dependencies listed in that
+1. A numbered list
+  1. A nested numbered list
+  2. Which is numbered
+2. Which is numbered
+## OLD <br>
+1.	Run the Quote Classifier Binary.ipynb -> this trains the quote classification model, place the happy, motivated and compiled spread sheets in that
 2.  Run the Training Image Classification.ipynb -> this trains the image classification model 
 2.	Run the video_face_eye_smile_detection.py file to generate live images that are used for the Image Classification model
 3.	Run the EASY (Emotion Aware SYstem) app.ipynb -> this generates the list/ database for quotes, Then gets the emotion for the user image, also this runs the main app feature
