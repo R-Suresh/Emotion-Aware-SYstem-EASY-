@@ -1,7 +1,6 @@
 # Emotion-Aware-SYstem-EASY-
 ## Working - <br>
-
-
+![](working.gif)
 ## Order of running app – <br>
 1.	Run the Quote Classifier Binary.ipynb -> this trains the quote classification model, find dependencies listed in that
 2.  Run the Training Image Classification.ipynb -> this trains the image classification model 
