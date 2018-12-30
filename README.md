@@ -2,18 +2,32 @@
 ## Working - <br>
 ![](working.gif)
 ## Current Results - <br>
-| Module        | Quote Detection           | Technique  |
-| ------------- |:-------------:| -----:|
-| Accuracy      | 56.25% | Ensembling |
-| Filename      | model-10-0.0704.hdf5 |  |
+| Module        | Quote Detection           | 6 Emotions Detection           | 3 Emotions Detection           |
+| ------------- |:-------------:|:-------------:|:-------------:|
+| Accuracy      | 56.25% | 13.06% | 13.06% |
+| Filename      | model-10-0.0704.hdf5 | final_emotion_model.hdf5 | final_emotion_model.hdf5 |
+| Technique      | Ensembling | - | - |
+| Tips to improve      | - | Try Ensembling; retrain model; Instead of VGG try using Inception etc | - |
+
+
 ## Running the app –  
 1. Training the quote classification model -
-   1. Place the happy, motivated and compiled spread sheets in the same directory
-   2. Create a folder called ```QuoteBinaryData``` where trained model files appear
+   1. Place the happy, motivated and compiled ( combined happy and motivated ) spread sheets in the same directory
+   2. Create a folder called ```QuoteBinaryData``` where trained model files appear  
+   2. Place ```model-10-0.0704.hdf5``` in it (or alternatively train model on your own)
    3. Now run the ```Quote Classifier Binary new.ipynb``` file in jupyter notebook
-2.  Run the Training Image Classification.ipynb -> this trains the image classification model 
+2. Training the image classification model -  
+   1. Download the images and place ```images``` folder in the same directory
+   2. The trained model files appear in the ```images``` folder  
+   2. Place ```final_model.hdf5``` in it (or alternatively train model on your own)
+   3. Now run the ```Training Image Classification new.ipynb``` file in jupyter notebook
 2.	Run the video_face_eye_smile_detection.py file to generate live images that are used for the Image Classification model
 3.	Run the EASY (Emotion Aware SYstem) app.ipynb -> this generates the list/ database for quotes, Then gets the emotion for the user image, also this runs the main app feature
+## Maping Scheme
+## Architecture
+## File Structure
+## Working -<br>
+In order to better serve user on a long term basis, the emotions of surprise, disgust and fear wchich were fleeting in nature compared to the emotions of happy, sad and anger, was dropped and a 3 emotion model was developed.
 ## To do in the future - <br>
 1. Create a bigger data corpus to train all 3 components, especially for the image classifier give a lot of low res and low light photos that are typically seen in real world deployment
 2. Create DNN for music classification
