@@ -1,16 +1,16 @@
-# Emotion-Aware-SYstem-EASY-
-## Working - <br>
+# Emotion-Aware-SYstem-EASY
+## Working <br>
 ![](working.gif)
-## Current Results - <br>
+## Current Results <br>
 | Module        | Quote Detection           | 6 Emotions Detection           | 3 Emotions Detection           |
 | ------------- |:-------------:|:-------------:|:-------------:|
-| Accuracy      | 56.25% | 13.06% | 13.06% |
-| Filename      | model-10-0.0704.hdf5 | final_emotion_model.hdf5 | final_emotion_model.hdf5 |
+| Accuracy      | 56.25% | 13.06% | 90.00% |
+| Filename      | model-10-0.0704.hdf5 | final_emotion_model.hdf5 | model-07-0.1495.hdf5 |
 | Technique      | Ensembling | - | - |
 | Tips to improve      | - | Try Ensembling; retrain model; Instead of VGG try using Inception etc | - |
 
 
-## Running the app –  
+## Running the app  
 1. Training the quote classification model -
    1. Place the happy, motivated and compiled ( combined happy and motivated ) spread sheets in the same directory
    2. Create a folder called ```QuoteBinaryData``` where trained model files appear  
@@ -24,9 +24,19 @@
 2.	Run the video_face_eye_smile_detection.py file to generate live images that are used for the Image Classification model
 3.	Run the EASY (Emotion Aware SYstem) app.ipynb -> this generates the list/ database for quotes, Then gets the emotion for the user image, also this runs the main app feature
 ## Maping Scheme
+
+In the 6 emotion model, 6 basic human emotions are detected - Happy, Sad, Fear, Disgust, Suprise, Anger <br>
+In the 3 emotion model, 3 human emotions are detected - Happy, Sad and Anger <br>
+The mapping scheme for all the 6 emotions are shown ( for the 3 emotion model only the specifc 3 mappings are used)
+
+| User Emotion        | Happy           | Sad           | Fear           | Disgust           | Suprise           | Anger           |
+| ------------- |:-------------:|:-------------:|:-------------:|:-------------:|:-------------:|:-------------:|
+| Music Played      | Happy | Happy | Happy| Happy| Happy| Happy|
+| Quote Displayed      | Happy | Happy| Happy| Happy| Happy| Happy|
+
 ## Architecture
 ## File Structure
-## Working -<br>
+## Working <br>
 In order to better serve user on a long term basis, the emotions of surprise, disgust and fear wchich were fleeting in nature compared to the emotions of happy, sad and anger, was dropped and a 3 emotion model was developed.
 ## To do in the future - <br>
 1. Create a bigger data corpus to train all 3 components, especially for the image classifier give a lot of low res and low light photos that are typically seen in real world deployment
