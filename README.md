@@ -2,9 +2,10 @@
 ## Working <br>
 ![](working.gif)
 ## Current Results <br>
-| Module        | Quote Detection           | Emotions Detection           |
+| Module        | Quote Emotion Detection           | User Emotion Detection           |
 | ------------- |:-------------:|:-------------:|
 | Accuracy      | 56.25% | 90.00% |
+| Input      | Quote | User Facial Image |
 | Filename      | model-10-0.0704.hdf5 |  model-07-0.1495.hdf5 |
 | Technique      | Ensembling | - |
 | Tips to improve      | Expand Dataset | Expand Dataset |
@@ -17,7 +18,7 @@
    2. Place ```model-10-0.0704.hdf5``` in it (or alternatively train model on your own)
    3. Now run the ```Quote Classifier Binary new.ipynb``` file in jupyter notebook
 2. Training the image classification model -  
-   1. [Download the images](https://drive.google.com/open?id=15Yiqo51onEdvZEsfBHo7IQuM0gt8no8U) and place ```images``` folder in the same directory
+   1. [Download the ```images``` folder](https://drive.google.com/open?id=15Yiqo51onEdvZEsfBHo7IQuM0gt8no8U) and place folder in the same directory
    2. The trained model files appear in the ```images``` folder  
    2. The ```model-07-0.1495.hdf5``` (for 3 emotions) appear in it (or alternatively train model on your own)
    3. Now run the ```Training 3 Image Classification new.ipynb``` (for 3 emotions) file in jupyter notebook
@@ -27,7 +28,7 @@
 
 In the 6 emotion model, 6 basic human emotions are detected - Happy, Sad, Fear, Disgust, Suprise, Anger <br>
 In the 3 emotion model, 3 human emotions are detected - Happy, Sad and Anger <br>
-The mapping scheme for all the 6 emotions are shown ( for the 3 emotion model only the specifc 3 mappings are used)
+The mapping scheme for all the 6 emotions are shown ( for the 3 emotion model only the specifc 3 mappings are used). Split into main and experimental model
 
 | User Emotion        | Happy           | Sad           | Fear           | Disgust           | Suprise           | Anger           |
 | ------------- |:-------------:|:-------------:|:-------------:|:-------------:|:-------------:|:-------------:|
