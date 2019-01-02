@@ -1,24 +1,24 @@
 # Emotion-Aware-SYstem-EASY
-## Working <br>
+## Demonstration <br>
 ![](working.gif)
    <br>
     User Emotion : Happy <br>
-    Song Played : Taki Taki <br>
+    Song Played : Taki Taki.mp3 <br>
     Quote Displayed : happiness is a state of mind
    
 ## Current Results <br>
-| Module        | Quote Emotion Detection           | User Emotion Detection           |
-| ------------- |:-------------:|:-------------:|
-| Accuracy      | 56.25% | 90.00% |
-| Input      | Quote | User Facial Image |
-| Filename      | model-10-0.0704.hdf5 |  model-07-0.1495.hdf5 |
-| Technique      | Ensembling | - |
-| Tips to improve      | Expand Dataset | Expand Dataset |
+| Module        | Quote Emotion Detection           | User Emotion Detection           | Music Emotion Detection           |
+| ------------- |:-------------:|:-------------:|:-------------:|
+| Accuracy      | 56.25% | 90.00% | 69.44% |
+| Input      | Quote | User Facial Image | Music File |
+| Filename      | model-10-0.0704.hdf5 |  model-07-0.1495.hdf5 | |
+| Technique      | Ensembling | - | - |
+| Tips to improve      | Expand Dataset | Expand Dataset | Expand Dataset |
 
 
 ## Running the app  
 1. Training the quote classification model -
-   1. Place the happy, motivated and compiled ( combined happy and motivated ) spread sheets in the same directory
+   1. The happy, motivated and compiled ( combined happy and motivated ) csv files ( in the same directory ) will be used ( or alternatively download the [happy](https://docs.google.com/spreadsheets/d/18jxlroMKeqfR_PBHx8Zon1QHY6TQv3NB0EnW909yn5s/edit?usp=sharing) and [motivated](https://docs.google.com/spreadsheets/d/102iHGh4NITqejrMyMwGUOEeQaKDLO1xYNTSvhTmLlEw/edit?usp=sharing) sheets in csv format and combine them yourself )
    2. Create a folder called ```QuoteBinaryData``` where trained model files appear  
    2. Place ```model-10-0.0704.hdf5``` in it (or alternatively train model on your own)
    3. Now run the ```Quote Classifier Binary new.ipynb``` file in jupyter notebook
@@ -27,6 +27,11 @@
    2. The trained model files appear in the ```images``` folder  
    2. The ```model-07-0.1495.hdf5``` (for 3 emotions) appear in it (or alternatively train model on your own)
    3. Now run the ```Training 3 Image Classification new.ipynb``` (for 3 emotions) file in jupyter notebook
+2. Training the music classification model -  
+   1. [Download the ```songs``` folder](https://drive.google.com/open?id=1COYn4g5VcHbNZCPzWpyrq9DAsId3PCq1) and place folder in the same directory
+   2. The trained model files appear in the ```songs``` folder  
+   2. The ```.hdf5``` (for 3 emotions) appear in it (or alternatively train model on your own)
+   3. Now run the ```.ipynb``` (for 3 emotions) file in jupyter notebook
 2.	Run the video_face_eye_smile_detection.py file to generate live images that are used for the Image Classification model
 3.	Run the EASY (Emotion Aware SYstem) app.ipynb -> this generates the list/ database for quotes, Then gets the emotion for the user image, also this runs the main app feature
 ## Maping Scheme
@@ -39,25 +44,30 @@ The mapping scheme between the user emotion, music played and quote displayed is
 | Music Played      | Happy | Sad | Calm|
 | Quote Displayed      | Happy | Motivation| Motivation|
 
-## Architecture
-## File Structure
-## Working <br>
-In order to better serve user on a long term basis, the emotions of surprise, disgust and fear wchich were fleeting in nature compared to the emotions of happy, sad and anger, was dropped and a 3 emotion model was developed.<br>
-Alternatively can make the 3 emotion model as the main one and the 6 emotion model as experimental
-## To do in the future - <br>
-1. Create a bigger data corpus to train all 3 components, especially for the image classifier give a lot of low res and low light photos that are typically seen in real world deployment
-2. Create DNN for music classification
-3. Make sure it runs on all other systems
-4. Make a web app for easy deployment on all platforms - cuurently have to run two different files (one to capture image, other to deliver services)
-5. Have some different Images in my system have to remove duplicates and upload to image corpus
-## Experimental 
-Have tried to develop a model to detect 6 basic human emotions.
+## Working 
 
-| Module        | 6 Emotions Detection           |
-| ------------- |:-------------:|
-| Accuracy      | 13.06% |
-| Filename      | final_emotion_model.hdf5 |
-| Tips to improve      | Expand Dataset; Try Ensembling; retrain model; Instead of VGG try using Inception etc |
+The system delivers its service through the use of 3 submodels, namely -
+* User emotion detection - User's facial image is captured and his/her emotion is discerned from that
+* Quote emotion detection - The emotion from quotes is detected. The advantage of having a separate quote classifier is
+   * No manual sorting of quotes needed in the future to add new quotes to the model
+   * User has an option to add quotes or use only quotes of his choice. He can simply enter the text and the model would classify the quote by itslef and use it when it services him/her.
+* Music emotion detection - The emotion from quotes is detected. The advantage of having a separate music classifier is similar to that of having a separate quote model.
+
+### File Structure
+
+### Architecture
+
+## Experimental 
+
+The model has been tweaked to detect 6 basic human emotions - happy, sad, fear, disgust, surprise and anger.<br>
+The quote emotion detection model remains the same while the music emotion model has been expanded to detect 4 emotions - happy, sad, calm and motivation from music. 
+
+| Module        | User Emotion Detection (6 emotions)          | Music Emotion Detection (4 emotions)          | 
+| ------------- |:-------------:|:-------------:|
+| Input      | User Facial Image | Music File |
+| Accuracy      | 13.06% | 69.44% |
+| Filename      | final_emotion_model.hdf5 | model-01-11.1613.hdf5 |
+| Tips to improve      | Expand Dataset; Try Ensembling; retrain model; Instead of VGG try using Inception etc | Expand dataset |
 
 ### Running the experimental app  
 1. Training the quote classification model remains the same as for the main model
@@ -66,6 +76,11 @@ Have tried to develop a model to detect 6 basic human emotions.
    2. The trained model files appear in the ```images``` folder  
    2. The final ```final_emotion_model.hdf5``` (for 6 emotions)  appear in it (or alternatively train model on your own)
    3. Now run the ```Training 6 Image Classification new.ipynb``` (for 6 emotions)  file in jupyter notebook
+2. Training the music classification model -  
+   1. [Download the ```songs``` folder](https://drive.google.com/open?id=1COYn4g5VcHbNZCPzWpyrq9DAsId3PCq1) and place folder in the same directory
+   2. The trained model files appear in the ```songs``` folder  
+   2. The ```.hdf5``` (for 4 emotions) appear in it (or alternatively train model on your own)
+   3. Now run the ```.ipynb``` (for 4 emotions) file in jupyter notebook
 3. All other steps remain the sameas in the main model
 ### Maping Scheme
 
@@ -77,7 +92,7 @@ The mapping scheme between the user emotion, music played and quote displayed is
 | Music Played      | Happy | Sad | Motivation| Calm| Happy| Calm|
 | Quote Displayed      | Happy | Motivation| Motivation| Happy| Happy| Motivation|
 
-## File descriptions - <br>
+## Related 
 1. Requirements.txt - all the librarires intalled in my anaconda virtual env, ```python = 3.6.6``` 
 2. [Image Corpus](https://drive.google.com/open?id=1Rq9An3UKM_iI_Y_yxWcN4hl-Z7-vfQgC)
 3. [Happy songs](https://drive.google.com/open?id=1COYn4g5VcHbNZCPzWpyrq9DAsId3PCq1)
@@ -92,5 +107,7 @@ The mapping scheme between the user emotion, music played and quote displayed is
 11. HappySongs1_features.csv and HappySongs2_features.csv have a common 'Saiyan...' song entry, pls remove before merging, also the ' charecter causes pandas.read_csv() to have decoding problems, so change such names if possible
 12. SadSongs_features.csv has the features extracted for sad songs
 13. MotivationSongs_features.csv and CalmSongs.csv have only names of tracks, features still have to be extracted
+1. Create a bigger data corpus to train all 3 components, especially for the image classifier give a lot of low res and low light photos that are typically seen in real world deployment
+4. Make a web app for easy deployment on all platforms - cuurently have to run two different files (one to capture image, other to deliver services)
 
 All Copy rights of Music belong to owners
