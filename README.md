@@ -1,6 +1,11 @@
 # Emotion-Aware-SYstem-EASY
 ## Working <br>
 ![](working.gif)
+   <br>
+    User Emotion : Happy <br>
+    Song Played : Taki Taki <br>
+    Quote Displayed : happiness is a state of mind
+   
 ## Current Results <br>
 | Module        | Quote Emotion Detection           | User Emotion Detection           |
 | ------------- |:-------------:|:-------------:|
@@ -26,14 +31,13 @@
 3.	Run the EASY (Emotion Aware SYstem) app.ipynb -> this generates the list/ database for quotes, Then gets the emotion for the user image, also this runs the main app feature
 ## Maping Scheme
 
-In the 6 emotion model, 6 basic human emotions are detected - Happy, Sad, Fear, Disgust, Suprise, Anger <br>
-In the 3 emotion model, 3 human emotions are detected - Happy, Sad and Anger <br>
-The mapping scheme for all the 6 emotions are shown ( for the 3 emotion model only the specifc 3 mappings are used). Split into main and experimental model
+3 human emotions are detected by the model - Happy, Sad and Anger <br>
+The mapping scheme between the user emotion, music played and quote displayed is as shown. 
 
-| User Emotion        | Happy           | Sad           | Fear           | Disgust           | Suprise           | Anger           |
-| ------------- |:-------------:|:-------------:|:-------------:|:-------------:|:-------------:|:-------------:|
-| Music Played      | Happy | Happy | Happy| Happy| Happy| Happy|
-| Quote Displayed      | Happy | Happy| Happy| Happy| Happy| Happy|
+| User Emotion        | Happy           | Sad           |  Anger           |
+| ------------- |:-------------:|:-------------:|:-------------:|
+| Music Played      | Happy | Sad | Calm|
+| Quote Displayed      | Happy | Motivation| Motivation|
 
 ## Architecture
 ## File Structure
@@ -58,11 +62,21 @@ Have tried to develop a model to detect 6 basic human emotions.
 ### Running the experimental app  
 1. Training the quote classification model remains the same as for the main model
 2. Training the image classification model -  
-   1. [Download the images](https://drive.google.com/open?id=15Yiqo51onEdvZEsfBHo7IQuM0gt8no8U) and place ```images``` folder in the same directory
+   1.  [Download the ```images``` folder](https://drive.google.com/open?id=15Yiqo51onEdvZEsfBHo7IQuM0gt8no8U) and place folder in the same directory
    2. The trained model files appear in the ```images``` folder  
    2. The final ```final_emotion_model.hdf5``` (for 6 emotions)  appear in it (or alternatively train model on your own)
    3. Now run the ```Training 6 Image Classification new.ipynb``` (for 6 emotions)  file in jupyter notebook
 3. All other steps remain the sameas in the main model
+### Maping Scheme
+
+In the 6 emotion model, 6 basic human emotions are detected - Happy, Sad, Fear, Disgust, Suprise, Anger <br>
+The mapping scheme between the user emotion, music played and quote displayed is as shown. 
+
+| User Emotion        | Happy           | Sad           | Fear           | Disgust           | Suprise           | Anger           |
+| ------------- |:-------------:|:-------------:|:-------------:|:-------------:|:-------------:|:-------------:|
+| Music Played      | Happy | Sad | Motivation| Calm| Happy| Calm|
+| Quote Displayed      | Happy | Motivation| Motivation| Happy| Happy| Motivation|
+
 ## File descriptions - <br>
 1. Requirements.txt - all the librarires intalled in my anaconda virtual env, ```python = 3.6.6``` 
 2. [Image Corpus](https://drive.google.com/open?id=1Rq9An3UKM_iI_Y_yxWcN4hl-Z7-vfQgC)
