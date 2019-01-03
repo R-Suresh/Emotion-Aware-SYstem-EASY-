@@ -34,15 +34,6 @@
    3. Now run the ```.ipynb``` (for 3 emotions) file in jupyter notebook
 2.	Run the video_face_eye_smile_detection.py file to generate live images that are used for the Image Classification model
 3.	Run the EASY (Emotion Aware SYstem) app.ipynb -> this generates the list/ database for quotes, Then gets the emotion for the user image, also this runs the main app feature
-## Maping Scheme
-
-3 human emotions are detected by the model - Happy, Sad and Anger <br>
-The mapping scheme between the user emotion, music played and quote displayed is as shown. 
-
-| User Emotion        | Happy           | Sad           |  Anger           |
-| ------------- |:-------------:|:-------------:|:-------------:|
-| Music Played      | Happy | Sad | Calm|
-| Quote Displayed      | Happy | Motivation| Motivation|
 
 ## Working 
 
@@ -54,8 +45,29 @@ The system delivers its service through the use of 3 submodels, namely -
 * Music emotion detection - The emotion from quotes is detected. The advantage of having a separate music classifier is similar to that of having a separate quote model.
 
 ### File Structure
+![](https://github.com/R-Suresh/Emotion-Aware-SYstem-EASY-/blob/master/File_structure.jpg)<br>
+The file structure is as displayed above.
+
+### Maping Scheme
+
+3 human emotions are detected by the model - Happy, Sad and Anger <br>
+The mapping scheme between the user emotion, music played and quote displayed is as shown. 
+
+| User Emotion        | Happy           | Sad           |  Anger           |
+| ------------- |:-------------:|:-------------:|:-------------:|
+| Music Played      | Happy | Sad | Calm|
+| Quote Displayed      | Happy | Motivation| Motivation|
 
 ### Architecture
+The Music classification model uses a Shallow Neural Network with architecture as shown below<br>
+![](https://github.com/R-Suresh/Emotion-Aware-SYstem-EASY-/blob/master/Music_Classifier_architecture_new.jpg)
+
+The Quote classification model uses a Recurrant Neural Network (RNN) with Long Short Term Memory (LSTM) Cells and architecture as shown below<br>
+![](https://github.com/R-Suresh/Emotion-Aware-SYstem-EASY-/blob/master/Quote_Classifier_Architecture_new.jpg)
+
+The Image classification model uses transfer learning with VGG and a 2 layer Neural Network as classifier with architecture as shown below<br>
+![](https://github.com/R-Suresh/Emotion-Aware-SYstem-EASY-/blob/master/Image_Classifier_architecture.jpg)
+
 
 ## Experimental 
 
@@ -81,7 +93,7 @@ The quote emotion detection model remains the same while the music emotion model
    2. The trained model files appear in the ```songs``` folder  
    2. The ```.hdf5``` (for 4 emotions) appear in it (or alternatively train model on your own)
    3. Now run the ```.ipynb``` (for 4 emotions) file in jupyter notebook
-3. All other steps remain the sameas in the main model
+3. All other steps remain the same as in the main model
 ### Maping Scheme
 
 In the 6 emotion model, 6 basic human emotions are detected - Happy, Sad, Fear, Disgust, Suprise, Anger <br>
